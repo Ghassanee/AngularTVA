@@ -9,17 +9,17 @@ import { TypeSocieteService } from 'src/app/controller/service/type-societe.serv
 })
 export class CreateComponent implements OnInit {
 
-  constructor(private typeSocieteService : TypeSocieteService) { }
+  constructor(private typeSocieteService: TypeSocieteService) { }
 
   ngOnInit(): void {
   }
 
-  public get $typeSoc(): TypeSociete {
-    return this.typeSocieteService.$typeSoc;
+  public get typeSoc(): TypeSociete {
+    return this.typeSocieteService.typeSoc;
   }
-  public add(){
+  public add() {
     return this.typeSocieteService.add();
-    
+
   }
 
 }

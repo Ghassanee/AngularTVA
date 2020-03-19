@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Societe } from '../model/societe.model';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -7,22 +8,87 @@ import { Societe } from '../model/societe.model';
 export class SocieteService {
 
 
-  private soc: Societe;
-  private socs: Array<Societe>;
-  public get $soc(): Societe {
-    return this.soc;
+  private _soc: Societe;
+  private _socs: Array<Societe>;
+  private _url = 'http://localhost:8090/impot/societe/';
+  constructor(private http: HttpClient) { }
+public save(societe: Societe) {
+  this.http.post<number>(this._url, this.soc).subscribe(
+    data => {
+      console.log(data);
+      if (data > 0) {
+        this.socs.push(this.cloneSocs(this.soc));
+        this.soc = null;
+      }
+    }, eror => {
+      console.log('eroro');
+    }
+  );
+}
+public deleteByRef(societe: Societe) {
+  this.http.delete<number>(this._url + 'ref/' + societe.ref).subscribe(
+    data => {
+console.log('ha data' + data);
+this.deleteByRefFromView(societe);
+    }, eror => {
+      console.log('eroro');
+    }
+  );
+
+}
+  public findByRef(societe: Societe) {
+    this.http.get<Societe>(this._url + 'ref/' + societe.ref) .subscribe(
+      data => {
+        this.soc = data ;
+      }
+    );
+
   }
 
-  public set $soc(value: Societe) {
-    this.soc = value;
+public findAll() {
+  this.http.get<Array<Societe>>(this._url).subscribe(
+    data => {
+      console.log('ha data' + data);
+      this.socs = data ;
+    }
+  );
+
+}
+
+  get soc(): Societe {
+    return this._soc;
   }
 
-  public get $socs(): Array<Societe> {
-    return this.socs;
+  set soc(value: Societe) {
+    this._soc = value;
   }
 
-  public set $socs(value: Array<Societe>) {
-    this.socs = value;
+  get socs(): Array<Societe> {
+    return this._socs;
   }
-  constructor() { }
+
+  set socs(value: Array<Societe>) {
+    this._socs = value;
+  }
+
+  private cloneSocs(soc: Societe) {
+  const myClone = new Societe() ;
+  myClone.id = soc.id ;
+  myClone.adresse = soc.adresse ;
+  myClone.capital = soc.capital ;
+  myClone.nbrEmployes = soc.nbrEmployes ;
+  myClone.nom = soc.nom ;
+  myClone.ref = soc.ref ;
+  myClone.typeSociete = soc.typeSociete ;
+  return myClone;
+  }
+
+  public deleteByRefFromView(societe: Societe) {
+    // tslint:disable-next-line:triple-equals
+    const index = this.socs.findIndex(s => s.ref == societe.ref);
+    // tslint:disable-next-line:triple-equals
+    if (index != -1) {
+      this.socs.splice(index, 1);
+    }
+  }
 }

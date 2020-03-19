@@ -1,6 +1,7 @@
 import { Societe } from './societe.model';
 
 export class FactureGain {
+  // tslint:disable-next-line:ban-types
   nomFacture: String;
   numeroFacture: number;
   societe: Societe;
@@ -10,5 +11,6 @@ export class FactureGain {
   montantHT: number;
   montantTTC: number;
   tva: number;
-  client : String;
+  // tslint:disable-next-line:ban-types
+  client: String;
 }

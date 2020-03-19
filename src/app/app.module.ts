@@ -15,6 +15,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { FooterComponent } from './footer/footer.component';
 import { FactureChargeComponent } from './facture-charge/facture-charge.component';
 import { FactureGainComponent } from './facture-gain/facture-gain.component';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { FactureGainComponent } from './facture-gain/facture-gain.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

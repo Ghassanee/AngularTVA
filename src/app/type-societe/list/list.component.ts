@@ -9,12 +9,12 @@ import { TypeSociete } from 'src/app/controller/model/type-societe.model';
 })
 export class ListComponent implements OnInit {
 
-  constructor(private typeSocieteService : TypeSocieteService) { }
+  constructor(private typeSocieteService: TypeSocieteService) { }
 
   ngOnInit(): void {
   }
-  public get $typeSocs(): Array<TypeSociete> {
-    return this.typeSocieteService.$typeSocs;
+  public get typeSocs(): Array<TypeSociete> {
+    return this.typeSocieteService.typeSocs;
   }
 
 }
