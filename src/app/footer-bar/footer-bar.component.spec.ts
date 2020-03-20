@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TypeSocieteComponent } from './type-societe.component';
+import { FooterBarComponent } from './footer-bar.component';
 
-describe('TypeSocieteComponent', () => {
-  let component: TypeSocieteComponent;
-  let fixture: ComponentFixture<TypeSocieteComponent>;
+describe('FooterBarComponent', () => {
+  let component: FooterBarComponent;
+  let fixture: ComponentFixture<FooterBarComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TypeSocieteComponent ]
+      declarations: [ FooterBarComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TypeSocieteComponent);
+    fixture = TestBed.createComponent(FooterBarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

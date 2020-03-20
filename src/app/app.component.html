@@ -1,51 +1,9 @@
-<header>
-  <app-top-bar></app-top-bar>
-</header>
-<div class="container">
-<div class="row">
-  <div class="col-md-3">
-    <h3 style="text-align: center;">Operations sur les elements</h3>
-    <button type="button" class="btn btn-primary btn-block">Operation : Enregistrer</button>
-    <button type="button" class="btn btn-primary btn-info btn-block">Operation : Consulter</button>
-    <button type="button" class="btn btn-secondary btn-block">Operation : Modifier</button>
-   <button type="button" class="btn btn-primary btn-danger btn-block fa-trash">Operation : Supprimer</button>
-  </div>
-  <div class="col-md-9">
-    <router-outlet></router-outlet>
-  </div>
+<app-top-bar></app-top-bar>
 
-</div>
-</div>
+<app-facture></app-facture>
 
-<br>
-<br>
-<br>
-<br>
 
 <footer>
-  <app-footer></app-footer>
+  <app-footer-bar></app-footer-bar>
 </footer>
-<!--<div class="container">
-  <h3>Gestion des impots sur les societes </h3>
-  <div class="container">
-    <div class="row ">
-      <div class="col-md-2">
-        <a routerLink="/societe">Societe</a>
-      </div>
-      <div class="col-md-2">
-        <a routerLink="/typeSociete">Type de societe</a>
-      </div>
-      <div class="col-md-2">
-        <a routerLink="/typeSociete">Type de societe</a>
-      </div>
-      <div class="col-md-2">
-        <a routerLink="/typeSociete">Type de societe</a>
-      </div>
-      <div class="col-md-2">
-        <a routerLink="/typeSociete">Type de societe</a>
-      </div>
-      <div class="col-md-2">
-        <a routerLink="/typeSociete">Type de societe</a>
-      </div>
-    </div>
-  </div></div>-->
+<router-outlet></router-outlet>
