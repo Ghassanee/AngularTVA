@@ -1,0 +1,97 @@
+<div class="card">
+  <div class="card-header">
+    <h3>Enregister une nouvelle declaration IR</h3>
+  </div>
+  <div class="card-body">
+    <form action="post">
+
+      <div class="form-group">
+        <p class="alert-danger"  > {{errorMsg()}} </p>
+        <div class="row">
+
+          <div class="col-md-6">
+            <label>ref</label>
+            <input type="text" class="form-control" required="required" [(ngModel)]="declarationIR.ref" name="ref">
+          </div>
+          <div class="col-md-6">
+            <label>emplyeRef</label>
+            <input type="text" class="form-control" [(ngModel)]="declarationIR.emplyeRef" name="employeRef">
+          </div>
+        </div>
+
+
+        <div class="row">
+
+          <div class="col-md-6">
+            <label>societeRef</label>
+            <input type="text" class="form-control" [(ngModel)]="declarationIR.societeRef" name="societeRef">
+          </div>
+          <div class="col-md-6">
+            <label>salaire</label>
+            <input type="number" class="form-control" [(ngModel)]="declarationIR.salaire" name="salaire">
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col-md-6">
+            <label>montantDeclaration</label>
+            <input type="number" class="form-control" [(ngModel)]="declarationIR.montantDeclaration" name="montantDeclaration">
+          </div>
+          <div class="col-md-6">
+            <label>tauxDeIrRef</label>
+            <input type="text" class="form-control" [(ngModel)]="declarationIR.tauxDeIrRef" name="tauxDeIrRef">
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-6">
+          <button type="submit"class="btn btn-outline-danger " style="width: 350px;text-align: center;margin-top: 30px;margin-left: 40px" (click)="save()">Save</button>
+        </div>
+        <div class="col-md-6">
+          <button type="submit" class="btn btn-outline-success " style="width: 350px;text-align: center;margin-top: 30px;margin-left: 0px" (click)="update()">Update</button>
+
+        </div>
+      </div>
+
+    </form>
+
+
+  </div>
+</div>
+<div class="card" style="margin-top: 10px">
+<div class="card-header">Liste de declaration IR</div>
+       <div class="card-body">
+         <table class="table table-striped">
+           <thead>
+           <tr>
+             <th scope="col">Ref</th>
+             <th scope="col">emplyeRef</th>
+             <th scope="col">societeRef</th>
+             <th scope="col">salaire</th>
+             <th scope="col">montantDeclaration</th>
+             <th scope="col">tauxDeIrRef</th>
+             <th scope="col">Delete</th>
+           </tr>
+           </thead>
+           <tbody>
+           <tr *ngFor="let d of listDeclarationIR">
+             <th scope="row">{{d.ref}}</th>
+             <td>{{d.emplyeRef}}</td>
+             <td>{{d.societeRef}}</td>
+             <td>{{d.salaire}}</td>
+             <td>{{d.montantDeclaration}}</td>
+             <td>{{d.tauxDeIrRef}}</td>
+             <td><button type="button" class="btn btn-danger" (click)="removeByRef(d.ref)" >Delete</button></td>
+           </tr>
+           </tbody>
+         </table>
+
+
+       </div>
+
+      </div>
+
