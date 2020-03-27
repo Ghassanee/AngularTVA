@@ -13,9 +13,9 @@ import {FactureGainService} from '../controller/service/facture-gain.service';
 })
 export class DeclarationTVAComponent implements OnInit {
 
-  constructor(private  declarationTVAService: DeclarationTVAService , private  factureChargeService: FactureChargeService ,
+  constructor(private  declarationTVAService: DeclarationTVAService , public  factureChargeService: FactureChargeService ,
               private factureGainService: FactureGainService) { }
-  private  listDeclarationTVA: DeclarationTVA[];
+  public  listDeclarationTVA: DeclarationTVA[];
 
   ngOnInit() {
     this.declarationTVAService.findAll().subscribe(data => {

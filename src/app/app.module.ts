@@ -16,18 +16,18 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { RouterModule, Routes } from '@angular/router';
 
 
-import { FooterBarComponent } from './footer-bar/footer-bar.component';
 import { FactureComponent } from './facture/facture.component';
-import { FactureChargeComponent } from './facture/facture-charge/facture-charge.component';
+import { FactureChargeComponent } from './facture/factureF/factureF.component';
 import { HomeComponent } from './home/home.component';
 
-import { FactureChargeComponent } from './facture-charge/facture-charge.component';
-import { FactureGainComponent } from './facture-gain/facture-gain.component';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { DeclarationIRComponent } from './declaration-ir/declaration-ir.component';
 import { DeclarationTVAComponent } from './declaration-tva/declaration-tva.component';
 import { TauxDeIRComponent } from './taux-de-ir/taux-de-ir.component';
 import {FooterBarComponent} from './footer-bar/footer-bar.component';
+import { LoginComponent } from './login/login.component';
+import { AuthentificationComponent } from './authentification/authentification.component';
+import { EmployeComponent } from './employe/employe.component';
 
 
 @NgModule({
@@ -42,7 +42,6 @@ import {FooterBarComponent} from './footer-bar/footer-bar.component';
     TopBarComponent,
     FooterBarComponent,
     FactureChargeComponent,
-    FactureGainComponent,
     DeclarationIRComponent,
     DeclarationTVAComponent,
     TauxDeIRComponent,
@@ -51,7 +50,13 @@ import {FooterBarComponent} from './footer-bar/footer-bar.component';
 
     FactureChargeComponent,
 
-    HomeComponent
+    HomeComponent,
+
+    LoginComponent,
+
+    AuthentificationComponent,
+
+    EmployeComponent
 
   ],
   imports: [

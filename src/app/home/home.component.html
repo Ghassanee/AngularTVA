@@ -3,12 +3,11 @@
     <div class="col-md-2"></div>
     <div class="col-md-8" style="width: 200px;height: 300px;">
       <div style="padding:10px;margin: 10px;">
-        <select class="form-control form-control-lg">
-          <option>Large select</option>
-          <option>Large select</option>
-          <option>Large select</option>
-          <option>Large select</option>
-          <option>Large select</option>
+        <label>Societe</label>
+        <label  class="mr-sm-2 sr-only" for="inputState">Societe</label>
+        <select class="custom-select mr-sm-2">
+          <option>Choose...</option>
+          <option *ngFor="let s of socs" [value]="s.ref">{{s.nom}}</option>
         </select>
         <br><br><br><br><br><br><br><br>
        <button routerLink="/facture" type="button"
