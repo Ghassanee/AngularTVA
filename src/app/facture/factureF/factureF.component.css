@@ -8,3 +8,9 @@ h3{
 padding: 20px;
 margin: 10px;
 }
+#fournisseur{
+  display: none;
+}
+#client{
+  display: none;
+}
