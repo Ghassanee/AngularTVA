@@ -4,7 +4,7 @@
   <div class="form-row">
     <div class="col-md-6 form-group">
       <label>ID</label>
-      <input type="text" class="form-control" placeholder="ID" [(ngModel)]="employe.id" [ngModelOptions]="{standalone: true}">
+      <input type="number" class="form-control" placeholder="ID" [(ngModel)]="employe.id" [ngModelOptions]="{standalone: true}">
     </div><br>
     <div class="col-md-6 form-group">
       <label>CIN</label>
@@ -43,10 +43,10 @@
         <option value="Female">F</option>
       </select>
     </div>
-    <div class="form-group col-md-4">
+    <div class="form-group col-md-6">
       <label>Societe</label>
       <label  class="mr-sm-2 sr-only" for="inputState">Societe</label>
-      <select class="custom-select mr-sm-2" [(ngModel)]="employe.societeRef" [ngModelOptions]="{standalone: true}">
+      <select class="custom-select mr-sm-2" >
         <option *ngFor="let s of socs" [value]="s.ref">{{s.nom}}</option>
       </select>
     </div>
@@ -92,9 +92,9 @@
       <td>{{c.prime}}</td>
       <td>{{c.sexe}}</td>
       <td>{{c.societeRef}}</td>
-      <td><a href="#"><i class="fas fa-edit"></i></a>
+      <td><a href="#" ><i class="fas fa-edit"></i></a>
       </td>
-      <td><a href="#"><i class="fa fa-trash"></i></a>
+    <td><button type="button" class="btn btn-danger btn-block" (click)="deleteByCin(c)">-</button>
       </td>
     </tr>
   </tbody>

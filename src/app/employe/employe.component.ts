@@ -35,7 +35,7 @@ export class EmployeComponent implements OnInit {
   public save(){
      this.employeService.save();
   }
-  // public deleteByCin(){
-  //   this.employeService.deleteByCin();
-  // }
+  public deleteByCin(employe : Employee){
+   this.employeService.deleteByCin(employe);
+ }
 }

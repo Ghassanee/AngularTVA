@@ -27,7 +27,7 @@ export class EmployeeService {
   }
 
   public deleteByCin(employe: Employee) {
-    this.http.delete<number>(this._url + 'cin/' + employe.cin).subscribe(
+    this.http.delete<number>(this._url + 'delete/' + employe.cin).subscribe(
       data => {
   console.log('ha data' + data);
   this.deleteByCinFromView(employe);
@@ -39,9 +39,9 @@ export class EmployeeService {
   }
 
   public deleteByCinFromView(employe: Employee) {
-    const index = this.socs.findIndex(s => s.cin === employe.cin);
+    const index = this.employes.findIndex(s => s.cin === employe.cin);
     if (index !== -1) {
-      this.socs.splice(index, 1);
+      this.employes.splice(index, 1);
     }
   }
   public findAll() {
@@ -77,7 +77,7 @@ export class EmployeeService {
     return this._employes;
   }
 
-  set socs(value: Array<Employee>) {
+  set employes(value: Array<Employee>) {
     this._employes = value;
   }
 
