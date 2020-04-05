@@ -3,37 +3,36 @@
     <table class="table" >
       <thead style="background-color: aliceblue">
       <th>Reference</th>
-      <!-- <th>nomFacture</th>
+      <th>nomFacture</th>
       <th>numeroFacture</th>
       <th>Date Facturation</th>
       <th>Date Paiement</th>
       <th>Declaration TVA</th>
       <th>TVA</th>
-      <th>Montant HT</th> -->
+      <th>Montant HT</th>
       <th>Montant TTC</th>
-      <!-- <th>Client</th>
-      <th>Societe</th> -->
+      <th>Client</th>
+      <th>Societe</th>
       <th>Action</th>
 
       </thead>
       <tbody>
       <tr *ngFor="let f of factureGains">
         <td>{{f.ref}}</td>
-        <!-- <td>{{f.nomFacture}}</td>
+        <td>{{f.nomFacture}}</td>
         <td>{{f.numeroFacture}}</td>
         <td>{{f.dateFacturation}}</td>
         <td>{{f.datePaiement}}</td>
         <td>{{f.declarationTva}}</td>
         <td>{{f.tva}}</td>
-        <td>{{f.montantHT}}</td> -->
+        <td>{{f.montantHT}}</td>
         <td>{{f.montantTTC}}</td>
-        <!-- <td>{{f.client}}</td>
-        <td>{{f.societe}}</td> -->
+        <td>{{f.client}}</td>
+        <td>{{f.societe}}</td>
         <td><button class="btn btn-info btn-sm fa fa-trash" (click)="deleteByRef(f)"></button>
       </tr>
       </tbody>
     </table>
   </div>
 </div>
-
 
