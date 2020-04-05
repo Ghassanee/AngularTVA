@@ -26,12 +26,61 @@
   </div>
   <div class="card-footer"></div>
 </div>!-->
-<app-type-societe></app-type-societe>
+
 <app-create-societe></app-create-societe>
 <br>
 <br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <button type="button" class="btn btn-secondary btn-block" onclick="displaying1()">Afficher la liste</button>
+    </div>
 
+    <div class="col-md-6">
+            <button type="button" class="btn btn-secondary btn-block " onclick="displaying()">Chercher dans la liste</button>
 
+    </div>
+
+  </div>
+</div><br><br>
+<div id="find">
+  <div class="form-row">
+  <div class="form-group col-md-5 ">
+    <input type="text" class="form-control" placeholder="Name Societe" [(ngModel)]="soc.ref" [ngModelOptions]="{standalone: true}"><br>
+    <button type="button" class="btn btn-primary btn-block" (click)="findByRef(soc)">Find By Reference</button>
+  </div>
+  <div class="form-group col-md-2 "></div>
+  </div>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+
+        <th scope="col">Nom</th>
+        <!-- <th scope="col">Reference</th> -->
+        <th scope="col">Adresse</th>
+        <th scope="col">Nombre d'employés</th>
+        <th scope="col">Capital</th>
+        <th scope="col">Type de societe</th>
+        <th scope="col">Action</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr >
+          <td>{{soc.nom}}</td>
+          <!-- <td>{{soc.ref}}</td> -->
+          <td>{{soc.adresse}}</td>
+          <td>{{soc.nbrEmployes}}</td>
+          <td>{{soc.capital}}</td>
+          <td>{{soc.typeSocieteRef}}</td>
+          <td><button class="btn btn-info btn-sm  fa fa-trash  " (click)="deleteByRef(soc)"></button> <button class="btn btn-danger btn-sm fa fa-plus" (click)="findByRef(soc)"></button>
+
+          </td>
+
+      </tr>
+    </tbody>
+  </table></div><br>
+<div id="tableEmployees">
 <div class="card">
   <div class="card-header">
 <h3>Liste des Sociétes </h3>
@@ -76,7 +125,7 @@
 
   </div>
 
-  </div>
+  </div></div>
 
-<button routerLink="/createEmployes" type="button" class="btn btn-secondary btn-block">Next <i class="fa fa-chevron-right" style="font-size:12px"></i></button>
+<button routerLink="/createEmployes" type="button" class="btn btn-secondary btn-block">Next ( Ajouter les donnees des employes de cette societe ) <i class="fa fa-chevron-right" style="font-size:12px"></i></button>
 

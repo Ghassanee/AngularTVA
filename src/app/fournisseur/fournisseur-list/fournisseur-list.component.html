@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card-body">
+    <table class="table" >
+      <thead>
+      <th>Cin</th>
+      <th>Nom</th>
+      <th>Prénom</th>
+      <th>action</th>
+
+
+      </thead>
+      <tbody>
+      <tr *ngFor="let n of fournisseurs">
+        <td>{{n.cin}}</td>
+        <td>{{n.nom}}</td>
+        <td>{{n.prenom}}</td>
+        <td><button class="btn btn-info btn-sm fa fa-trash" (click)="deleteByCin(n)"></button></td>
+
+
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+

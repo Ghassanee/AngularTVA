@@ -31,7 +31,16 @@ export class EmployeComponent implements OnInit {
 
     return this.socService.socs;
   }
+  public get soc(): Societe {
 
+    return this.socService.soc;
+  }
+ public findByCin(employe : Employee){
+    this.employeService.findByCin(employe);
+   }
+   public findBySociete(employe : Employee, societe:Societe){
+    this.employeService.findBySociete(employe,societe);
+   }
   public save(){
      this.employeService.save();
   }

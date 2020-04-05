@@ -1,14 +1,15 @@
 import { Societe } from './societe.model';
 
 export class FactureCharge {
-  nomFacture: string;
-  numeroFacture: number;
-  societe: Societe;
-  dateFacturation: Date;
-  datePaiement: Date;
-  declarationTva: number;
-  montantHT: number;
-  montantTTC: number;
-  tva: number;
-  fournisseur : string;
+  public ref: string;
+  public nomFacture: string;
+  public numeroFacture: number;
+  public societeRef: string;
+  public dateFacturation: Date;
+  public datePaiement: Date;
+  public declarationRef: string;
+  public montantHT: number;
+  public montantTTC: number;
+  public tva: number;
+  public fournisseurCin: string;
 }

@@ -1,5 +1,6 @@
 import { Societe } from './societe.model';
 
+
 export class Facture {
   nomFacture: string;
   numeroFacture: number;
@@ -13,4 +14,5 @@ export class Facture {
   tva: number;
   societetRef : string;
 }
+
 

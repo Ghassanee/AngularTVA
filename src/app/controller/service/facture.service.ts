@@ -15,7 +15,9 @@ export class FactureService {
 
    }
 
-
+public calcul() {
+  this.facture.montantTTC= this.facture.montantHT*this.facture.tva;
+}
    public save() {
     this.http.post<number>(this._url, this.facture).subscribe(
       data => {

@@ -1,0 +1,67 @@
+
+<h1 class="card-header mt-5" style="background-color:aliceblue">Facture  Charge </h1>
+  <div class="form-row mt-5">
+    <div class="col-md-6 form-group">
+      <label>Reference</label>
+      <input type="text" class="form-control" name="ref" placeholder="Reference" [(ngModel)]="factureCharge.ref">
+    </div><br><br><br>
+    <div class="col-md-6 form-group">
+      <label>Nom du Facture</label>
+      <input type="text" class="form-control" name="nom" placeholder="nom"[(ngModel)]="factureCharge.nomFacture">
+    </div><br>
+    <div class="col-md-6 form-group">
+      <label>Reference societé </label>
+      <input type="text" class="form-control" name="refSoc"  placeholder="date paiement"[(ngModel)]="factureCharge.societeRef">
+    </div><br>
+    <div class="col-md-6 form-group">
+      <label>Fournisseur Cin</label>
+      <input type="text" class="form-control" name="CinF"  placeholder="date paiement"[(ngModel)]="factureCharge.fournisseurCin">
+    </div><br>
+    <div class="col-md-6 form-group">
+      <label>Reference declaration </label>
+      <input type="text" class="form-control" name="refDec"  placeholder="date paiement"[(ngModel)]="factureCharge.declarationRef">
+    </div><br>
+    <div class="col-md-6 form-group">
+      <label>Numero de Facture</label>
+      <input type="number" class="form-control" name="number" placeholder="numero"[(ngModel)]="factureCharge.numeroFacture">
+    </div><br>
+    <div class="col-md-6 form-group">
+      <label>Date de Facturation</label>
+      <input type="date" class="form-control" name="date" placeholder="date facturation" [(ngModel)]="factureCharge.dateFacturation">
+    </div><br>
+    <div class="col-md-6 form-group">
+      <label>Date de Paiement</label>
+      <input type="date" class="form-control" name="dte"  placeholder="date paiement"[(ngModel)]="factureCharge.datePaiement">
+    </div><br>
+    <div class="col-md-6 form-group">
+      <label>Montant HT</label>
+      <input type="number" class="form-control" name="ht" placeholder="Montant HT"[(ngModel)]="factureCharge.montantHT">
+    </div>
+    <div class="col-md-6 form-group">
+      <label>Montant TTC</label>
+      <input type="number" class="form-control"name="ttc" placeholder="Montant TTC"[(ngModel)]="factureCharge.montantTTC">
+    </div>
+    <div class="col-md-6 form-group">
+      <label>TVA</label>
+      <input type="number" class="form-control" name="tva" placeholder="TVA"[(ngModel)]="factureCharge.tva">
+    </div>
+
+
+    <br>  <br>  <br>
+
+  </div>
+<div class="card-footer">
+  <div class="row">
+    <div class="col-md-6">
+      <button type="submit"class="btn btn-outline-danger btn-block"  (click)="save()">Save</button>
+    </div>
+    <div class="col-md-6">
+      <button type="submit" class="btn btn-outline-success btn-block" (click)="update()">Update</button>
+
+    </div>
+  </div>
+</div>
+<br>  <br>  <br>
+
+
+

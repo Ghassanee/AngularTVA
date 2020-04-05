@@ -1,0 +1,16 @@
+<h1>Client</h1>
+<form>
+  <div class="form-row">
+    <div class="col-md-6 form-group">
+      <label>CIN</label>
+      <input type="text" class="form-control" name="cin" placeholder="cin" [(ngModel)]="client.cin">
+    </div>
+    <div class="col-md-6 form-group">
+      <label>Nom </label>
+      <input type="text" class="form-control" name="nom" placeholder="nom"[(ngModel)]="client.nom">
+    </div>
+  </div>
+</form> <button type="button" class="btn btn-primary" (click)="save()">Enregistrer</button>
+
+
+

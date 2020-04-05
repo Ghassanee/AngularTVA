@@ -48,9 +48,14 @@
 
               <option *ngFor="let c of typeSocs" >{{c.libelle}}</option>
             </select>
+            <button  type="submit" class="btn btn-secondary btn-block" routerLink="/createTypeSociete">Creer un type de societe</button>
+          </div>
+          <div class="col-md-6">
+            <label>TypeSocieteLibelle</label>
+            <input type="text" class="form-control" [(ngModel)]="soc.typeSocieteRef" placeholder="Libelle de Type de societe">
           </div>
         </div>
-
+        
       </div>
 
 

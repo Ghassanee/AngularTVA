@@ -1,3 +1,9 @@
 h3{
   text-align: center;
 }
+#tableEmployees{
+  display: none;
+}
+#find{
+  display: none;
+}

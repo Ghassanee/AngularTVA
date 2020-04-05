@@ -1,5 +1,5 @@
 export class Client {
   public id: number;
-  public name: String;
-  public cne: String;
+  public cin: string;
+  public nom: string;
 }

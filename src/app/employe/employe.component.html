@@ -46,11 +46,11 @@
     <div class="form-group col-md-6">
       <label>Societe</label>
       <label  class="mr-sm-2 sr-only" for="inputState">Societe</label>
-      <select class="custom-select mr-sm-2" >
+      <select class="custom-select mr-sm-2"  [(ngModel)]="employe.societeRef" [ngModelOptions]="{standalone: true}" >
         <option *ngFor="let s of socs" [value]="s.ref">{{s.nom}}</option>
       </select>
     </div>
-    <div class="form-group col-md-4">
+    <div class="form-group col-md-6">
       <label for="inputState">SocieteRef</label>
       <input type="text" class="form-control" placeholder="SocieteRef" [(ngModel)]="employe.societeRef" [ngModelOptions]="{standalone: true}">
     </div>
@@ -62,11 +62,66 @@
 <br><br>
 <hr>
 <br>
-<h3>Liste des employees</h3>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <button type="button" class="btn btn-secondary btn-block" onclick="displaying1()">Afficher la liste</button>
+    </div>
+
+    <div class="col-md-6">
+            <button type="button" class="btn btn-secondary btn-block " onclick="displaying()">Chercher dans la liste</button>
+
+    </div>
+
+  </div>
+</div><br><br>
+<div id="find">
+<div class="form-row">
+<div class="form-group col-md-5 ">
+  <input type="text" class="form-control" placeholder="CIN" [(ngModel)]="employe.cin" [ngModelOptions]="{standalone: true}"><br>
+  <button type="button" class="btn btn-primary btn-block" (click)="findByCin(employe)">Find By CIN</button>
+</div>
+<div class="form-group col-md-2 "></div>
+</div>
 <table class="table table-hover">
   <thead>
     <tr>
-      <th scope="col">#</th>
+      <!-- <th scope="col">#</th> -->
+      <th scope="col">CIN</th>
+      <th scope="col">First-Name</th>
+      <th scope="col">Last-Name</th>
+      <th scope="col">Salaire</th>
+      <th scope="col">Gmail</th>
+      <th scope="col">Adresse</th>
+      <th scope="col">Prime</th>
+      <th scope="col">Sexe</th>
+      <th scope="col">SocieteRef</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr >
+     
+      <td>{{employe.cin}}</td>
+      <td>{{employe.prenom}}</td>
+      <td>{{employe.nom}}</td>
+      <td>{{employe.salaire}}</td>
+      <td>{{employe.adresseMail}}</td>
+      <td>{{employe.adresseHabit}}</td>
+      <td>{{employe.prime}}</td>
+      <td>{{employe.sexe}}</td>
+      <td>{{employe.societeRef}}</td>
+
+    </tr>
+  </tbody>
+</table></div><br>
+<div id="tableEmployees">
+<h3 style="text-align: center;">Liste des employees</h3><br>
+<table class="table table-hover">
+  <thead>
+    <tr>
+     
       <th scope="col">CIN</th>
       <th scope="col">First-Name</th>
       <th scope="col">Last-Name</th>
@@ -77,12 +132,12 @@
       <th scope="col">Sexe</th>
       <th scope="col">SocieteRef</th>
       <th scope="col"></th>
-      <th scope="col"></th>
+
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let c of employes">
-      <th scope="row">{{ c.id}}</th>
+    
       <td>{{c.cin}}</td>
       <td>{{c.prenom}}</td>
       <td>{{c.nom}}</td>
@@ -92,26 +147,11 @@
       <td>{{c.prime}}</td>
       <td>{{c.sexe}}</td>
       <td>{{c.societeRef}}</td>
-      <td><a href="#" ><i class="fas fa-edit"></i></a>
-      </td>
     <td><button type="button" class="btn btn-danger btn-block" (click)="deleteByCin(c)">-</button>
       </td>
     </tr>
   </tbody>
-</table><br>
-<div class="container">
-  <div class="row">
-    <div class="col-md-2">
-      <!-- <button type="button"  routerLink="/facture/tva"
-        class="btn btn-secondary "><i class="fa fa-chevron-left" style="font-size:12px"></i> Back</button> -->
-    </div>
+</table><br></div>
 
-    <div class="col-md-8"></div>
-    <div class="col-md-2">
-      <!-- <button type="button"  routerLink=""
-        class="btn btn-secondary "> Next <i class="fa fa-chevron-right" style="font-size:12px"></i></button> -->
-    </div>
-  </div>
-</div>
 
 <br><br>

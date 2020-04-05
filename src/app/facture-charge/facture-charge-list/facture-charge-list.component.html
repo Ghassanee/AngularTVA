@@ -1,0 +1,96 @@
+<!-- <h1 class="card-header mt-5" style="background-color:aliceblue">Liste facture charge</h1> -->
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <button type="button" class="btn btn-secondary btn-block" onclick="displayingCharge()">Afficher la liste</button>
+    </div>
+
+    <div class="col-md-6">
+            <button type="button" class="btn btn-secondary btn-block " onclick="displayingCharge2()">Chercher</button>
+
+    </div>
+
+  </div>
+</div><br><br>    
+<div id="listeCharges">
+<table class="table mt-5" >
+      <thead style="background-color: aliceblue">
+      <th>Reference</th>
+      <!-- <th>nomFacture</th>
+      <th>societe</th>
+      <th>declaration</th>
+      <th>fournisseur</th>
+      <th>numeroFacture</th>
+      <th>date Facturation</th>
+      <th>date Paiement</th>
+      <th>TVA</th>
+      <th>Montant HT</th> -->
+      <th>Montant TTC</th>
+      <th>Action</th>
+
+      </thead>
+      <tbody>
+      <tr *ngFor="let f of factureCharges">
+        <td>{{f.ref}}</td>
+        <!-- <td>{{f.nomFacture}}</td>
+        <td>{{f.numeroFacture}}</td>
+        <td>{{f.societeRef}}</td>
+        <td>{{f.declarationRef}}</td>
+        <td>{{f.fournisseurCin}}</td>
+        <td>{{f.dateFacturation}}</td>
+        <td>{{f.datePaiement}}</td>
+        <td>{{f.tva}}</td>
+        <td>{{f.montantHT}}</td> -->
+        <td>{{f.montantTTC}}</td>
+        <td><button class="btn btn-info btn-sm fa fa-trash" (click)="deleteByRef(f)"></button></td>
+
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="find">
+    <div class="form-row">
+      <div class="form-group col-md-5 ">
+        <input type="text" class="form-control" placeholder="Reference" />
+        <button type="button" class="btn btn-primary btn-block" >Find By Reference</button>
+      </div>
+      <div class="form-group col-md-2 "></div>
+      </div>
+    <table class="table mt-5" >
+          <thead style="background-color: aliceblue">
+          <th>Reference</th>
+          <!-- <th>nomFacture</th>
+          <th>societe</th>
+          <th>declaration</th>
+          <th>fournisseur</th>
+          <th>numeroFacture</th>
+          <th>date Facturation</th>
+          <th>date Paiement</th>
+          <th>TVA</th>
+          <th>Montant HT</th> -->
+          <th>Montant TTC</th>
+          <th>Action</th>
+    
+          </thead>
+          <tbody>
+          <tr *ngFor="let f of factureCharges">
+            <td>{{f.ref}}</td>
+            <!-- <td>{{f.nomFacture}}</td>
+            <td>{{f.numeroFacture}}</td>
+            <td>{{f.societeRef}}</td>
+            <td>{{f.declarationRef}}</td>
+            <td>{{f.fournisseurCin}}</td>
+            <td>{{f.dateFacturation}}</td>
+            <td>{{f.datePaiement}}</td>
+            <td>{{f.tva}}</td>
+            <td>{{f.montantHT}}</td> -->
+            <td>{{f.montantTTC}}</td>
+            <td><button class="btn btn-info btn-sm fa fa-trash" (click)="deleteByRef(f)"></button></td>
+    
+          </tr>
+          </tbody>
+        </table>
+      </div>
+<p routerLink="factureChargeDetaills" style="cursor: pointer;">PS : Pour plusieurs de donnes sur les factures de charges , cliquez ici</p>

@@ -1,0 +1,35 @@
+
+<h1>Fournisseurs</h1>
+<form>
+  <div class="form-row">
+    <div class="col-md-6 form-group">
+      <label>CIN</label>
+      <input type="text" class="form-control" name="cin" placeholder="cin" [(ngModel)]="fournisseur.cin">
+    </div>
+    <div class="col-md-6 form-group">
+      <label>Nom </label>
+      <input type="text" class="form-control" name="nom" placeholder="nom"[(ngModel)]="fournisseur.nom">
+    </div>
+    <div class="col-md-6 form-group">
+      <label>Prenom </label>
+      <input type="text" class="form-control" name="prenom" placeholder="prenom"[(ngModel)]="fournisseur.prenom">
+    </div>
+
+
+
+  </div>
+</form> <div class="card-footer">
+  <div class="row">
+    <div class="col-md-6">
+      <button type="submit"class="btn btn-outline-danger btn-block" style="width: 300px;margin-left: 230px" (click)="save()">Save</button>
+    </div>
+    <div class="col-md-6">
+      <button type="submit" class="btn btn-outline-success btn-block" style="width: 300px "(click)="update()">Update</button>
+
+    </div>
+  </div>
+</div>
+<br> <br>
+
+
+

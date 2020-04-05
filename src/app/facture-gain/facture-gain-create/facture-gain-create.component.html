@@ -1,0 +1,63 @@
+
+<h1 class="card-header mt-5" style="background-color:aliceblue">Facture  Gain</h1>
+<div class="form-row">
+  <div class="col-md-6 form-group">
+    <label>Reference</label>
+    <input type="text" class="form-control" name="ref" placeholder="ref" [(ngModel)]="factureGain.ref">
+  </div><br><br><br>
+  <div class="col-md-6 form-group">
+    <label>Num Facture</label>
+    <input type="text" class="form-control" name="ref" placeholder="Num Facture" [(ngModel)]="factureGain.numeroFacture">
+  </div><br><br><br>
+  <div class="col-md-6 form-group">
+    <label>Nom du Facture</label>
+    <input type="text" class="form-control" name="nom" placeholder="nom" [(ngModel)]="factureGain.nomFacture">
+  </div><br>
+  <div class="col-md-6 form-group">
+    <label>Reference societé </label>
+    <input type="text" class="form-control" name="refSoc"  placeholder="Ref Societe" [(ngModel)]="factureGain.societeRef">
+  </div><br>
+  <div class="col-md-6 form-group">
+    <label>Nom societé </label>
+    <input type="text" class="form-control" name="nomSoc"  placeholder="Nom Societe" [(ngModel)]="factureGain.societe">
+  </div><br>
+  <div class="col-md-6 form-group">
+    <label>Cin Client</label>
+    <input type="text" class="form-control" name="clientCin"  placeholder="CIN"[(ngModel)]="factureGain.clientCne">
+  </div><br>
+  <div class="col-md-6 form-group">
+    <label>Client</label>
+    <input type="text" class="form-control" name="client"  placeholder="client"[(ngModel)]="factureGain.client">
+  </div><br>
+  <div class="col-md-6 form-group">
+    <label>Date de Facturation</label>
+    <input type="date" class="form-control" name="date" placeholder="date facturation" [(ngModel)]="factureGain.dateFacturation">
+  </div><br>
+  <div class="col-md-6 form-group">
+    <label>Date de Paiement</label>
+    <input type="date" class="form-control" name="dte"  placeholder="date paiement"[(ngModel)]="factureGain.datePaiement">
+  </div><br>
+  <div class="col-md-6 form-group">
+    <label>Montant HT</label>
+    <input type="number" class="form-control" name="ht" placeholder="Montant HT"[(ngModel)]="factureGain.montantHT">
+  </div>
+  <div class="col-md-6 form-group">
+    <label>Montant TTC</label>
+    <input type="number" class="form-control"name="ttc" placeholder="Montant TTC"[(ngModel)]="factureGain.montantTTC">
+  </div>
+  <div class="col-md-6 form-group">
+    <label>Declaration TVA</label>
+    <input type="number" class="form-control" name="declarationTva" placeholder="Declaration TVA"[(ngModel)]="factureGain.declarationTva">
+  </div>
+  <div class="col-md-6 form-group">
+    <label>TVA</label>
+    <input type="number" class="form-control" name="tva" placeholder="TVA"[(ngModel)]="factureGain.tva">
+  </div>
+
+</div>
+<button type="submit"  class="btn  btn-secondary btn-lg btn-block mt-5" (click)="save()">save</button>
+
+<br>  <br>  <br>
+
+
+
