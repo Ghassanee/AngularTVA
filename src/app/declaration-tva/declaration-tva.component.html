@@ -38,9 +38,95 @@
         </div>
 
         <div class="row">
-          <!-- <app-facture></app-facture> -->
-          <div class="col-md-6"><app-facture-charge></app-facture-charge></div>
-          <div class="col-md-6"><app-facture-gain></app-facture-gain></div>
+          <div class="col-md-6">
+            <div class="card" style="margin: 10px 2px 2px 0 ;  ">
+              <div class="card-header">
+                <h3>Enregister une nouvelle facture Charge</h3>
+              </div>
+              <div class="card-body">
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <label>ref</label>
+                        <input type="number" class="form-control" [(ngModel)]="factureCharge.numeroFacture"  name="refC">
+                      </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-md-12">
+                      <button type=""class="btn btn-outline-danger " style="margin-top: 8px" (click)="addFactureCharges(factureCharge)">Save</button>
+                    </div>
+                    </div>
+                  </div>
+                <div class="row ">
+                  <div class="col-md-12">
+                    <table class="table table-hover">
+                      <thead>
+                      <tr>
+                        <th scope="col">Reference</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr *ngFor="let s of declarationTVA.factureCharges">
+
+                        <td>{{s.numeroFacture}}</td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+
+
+
+          <div class="col-md-6">
+            <div class="card" style="margin: 10px 2px 2px 0px ; ">
+              <div class="card-header">
+                <h3>Enregister une nouvelle facture Gain</h3>
+              </div>
+              <div class="card-body">
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <label>ref</label>
+                        <input type="number" class="form-control" [(ngModel)]="factureGain.numeroFacture"  name="refG">
+                      </div>
+                    </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <button type="" class="btn btn-outline-danger " style="margin-top: 8px" (click)="addFactureGains(factureGain)">Save</button>
+                    </div>
+                  </div>
+                  </div>
+                <div class="row ">
+                  <div class="col-md-12">
+                    <table class="table table-hover">
+                      <thead>
+                      <tr>
+                        <th scope="col">Reference</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr *ngFor="let s of declarationTVA.factureGains">
+                        <td>{{s.numeroFacture}}</td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-6">
+          <button type="submit"class="btn btn-outline-danger " style="width: 350px;text-align: center;margin-top: 30px;margin-left: 40px" (click)="save()">Save</button>
+        </div>
+        <div class="col-md-6">
+          <button type="submit" class="btn btn-outline-success " style="width: 350px;text-align: center;margin-top: 30px;margin-left: 0px" (click)="update()">Update</button>
         </div>
       </div>
     </form>
